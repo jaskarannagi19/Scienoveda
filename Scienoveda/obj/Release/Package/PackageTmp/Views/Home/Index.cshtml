@@ -1,0 +1,451 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSubmit").click(function () {
+
+            var name = $("#txtName").val();
+            var email = $("#txtEmail").val();
+            var mobile = $("#txtMobile").val();
+            var content = $("#txtContent").val();
+
+            $.ajax({
+                type: 'POST',
+                data: {
+                    Content: content,
+                    Email: email,
+                    Mobile: mobile,
+                    Name: name
+                },
+                url: "../../Home/SendMail",
+
+                success: function (result) {
+                alert(result);
+                }
+            });
+        });
+    });
+</script>
+<!-- Start Service Section -->
+<div id="hm-service" class="layer-stretch">
+    <div class="layer-wrapper">
+        <div class="layer-ttl">
+            <h3>What We Do</h3>
+        </div>
+        <div class="layer-container row">
+            <div class="hm-service-left col-md-5">
+                <img src="~/images/garciniabottle.jpg" alt="Scienoveda Pharmaceutical">
+            </div>
+            <div class="hm-service-right col-md-7">
+                <p class="paragraph-medium paragraph-black">We are dealing woth five fat reduce products. Slimfast, Green Coffee Beans, Garcinia Cambogia, Shilajit, Jamun Extract
+We also provide Diet chart acc. to the age and weight of the person. We have a special dietitian team for that process. We also deals with weight gainer, pain relief, ear and eye drop products</p>
+                <div class="hm-service">
+                    <div class="hm-service-block">
+                        <i class="fa fa-stethoscope"></i>
+                 
+                    </div>
+                    <div class="hm-service-block">
+                        <i class="fa fa-child"></i>
+                 
+                    </div>
+                    <div class="hm-service-block">
+                        <i class="fa fa-certificate"></i>
+                 
+                    </div>
+                    <div class="hm-service-block">
+                        <i class="fa fa-h-square"></i>
+                 
+                    </div>
+                    <div class="hm-service-block">
+                        <i class="fa fa-stethoscope"></i>
+                 
+                    </div>
+                    <div class="hm-service-block">
+                        <i class="fa fa-bullhorn"></i>
+                 
+                    </div>
+                </div>
+                <div class="hm-service-view text-center">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Service Section -->
+<!-- Start About Section -->
+<div id="hm-about" class="colored-background">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl layer-ttl-white">
+                <h3>Who We Are</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="hm-about-block">
+                        <div class="tbl-cell hm-about-icon"><i class="fa fa-user"></i></div>
+                        <div class="tbl-cell hm-about-number">
+                            <span class="counter">5</span>
+                            <p>Team</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hm-about-block">
+                        <div class="tbl-cell hm-about-icon"><i class="fa fa-calendar"></i></div>
+                        <div class="tbl-cell hm-about-number">
+                            <span class="counter">8</span>
+                            <p>Year of Experience 
+                            <br />and counting</p>
+                        </div>
+                    </div>
+                    <div class="hm-about-block">
+                        <div class="tbl-cell hm-about-icon"><i class="fa fa-clock-o"></i></div>
+                        <div class="tbl-cell hm-about-number">
+                            <span class="counter">40</span>
+                            <p>+ Opening Hours per Week</p>
+                        </div>
+                    </div>
+                    <div class="hm-about-paragraph">
+                        <p class="paragraph-medium paragraph-white">
+                            <span class="theme-dropcap color-white">S</span>cienoveda pharma company is one of the best companies in chandigarh that is reowned for its unique reliable, responsive, quality and standard of pharmaceutical, healthcare and life science products and services. The main motive of our company is to provide our customer best and Natural products.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-thumbnail" src="uploads/hm-about.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div><!-- End About Section -->
+
+
+<!--Start Product section-->
+<div class="">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl">
+                <h3>Products</h3>
+            </div>
+            <div class="layer-container">
+                <div id="hm-product-slider" class="owl-carousel owl-theme theme-owl-dot">
+                    <div class="hm-doctor opaque">
+
+                        <a href="~/images/coffeebottle.jpg" target="new">
+                            <img class="img-responsive" src="~/images/coffeebottle.jpg" alt="">
+                        </a>
+                        <h6>Green Coffee Beans</h6>
+                        <p></p>
+                    </div>
+                    <div class="hm-doctor opaque">
+                        <a href="~/images/garciniabottle.jpg" target="new">
+                            <img class="img-responsive" src="~/images/garciniabottle.jpg" alt="">
+                        </a>
+                        
+                        <h6>Garcinia Cambogia</h6>
+                        <p></p>
+                    </div>
+                    <div class="hm-doctor opaque">
+                        <a href="~/images/shilajitbottle.jpg" target="new">
+                            <img class="img-responsive" src="~/images/shilajitbottle.jpg" alt="">
+                        </a>
+                        
+                        <h6>Shilajit</h6>
+                        <p></p>
+                    </div>
+                    <div class="hm-doctor opaque">
+                        <a href="~/images/jamunbottle.jpg" target="new">
+                            <img class="img-responsive" src="~/images/jamunbottle.jpg" alt="">
+                        </a>
+                        
+                        <h6>Jamun Extract</h6>
+                        <p></p>
+                    </div>
+                    <div class="hm-doctor opaque">
+                        <a href="~/images/slimfastbottle.jpg" target="new">
+                            <img class="img-responsive" src="~/images/slimfastbottle.jpg" alt="">
+                        </a>
+                        
+                        <h6>Slimfast</h6>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Product section-->
+
+<!--Start Endorsed By section-->
+<div id="hm-feature" class="colored-background">
+    <div class="layer-stretch">
+        <div class="layer-wrapper layer-bottom-10">
+            <div class="layer-ttl layer-ttl-white">
+                <h3>Endorsed By</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                            <img src="~/images/pharmacy_australia_logo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate" style="max-height:none !important">
+                            <img src="~/images/logo1-900x565.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate" style="max-height:none !important">
+                            <img src="~/images/delhilogo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Start Feature Section -->
+<div id="hm-feature" class="">
+    <div class="layer-stretch">
+        <div class="layer-wrapper layer-bottom-10">
+            <div class="layer-ttl">
+                <h3>Why Choose Us</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                        </div>
+                        <span>Professional Team</span>
+                        <p class="paragraph-small paragraph-black">We have experienced team of production and inspection personnel to ensure our product quality.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                        </div>
+                        <span>Quality Control</span>
+                        <p class="paragraph-small paragraph-black">Our quality policy is strict and effective management, the production of world class quality products.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                        </div>
+                        <span>Global and Digital marketing</span>
+                        <p class="paragraph-small paragraph-black">More than 90% of our products are for export all over the world and for digital marketing we are force behind ranking websites and strong brands.</p>
+                    </div>
+                </div>
+                </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                        </div>
+                        <span>Loyalty</span>
+                        <p class="paragraph-small paragraph-black">Our staff is relationship driven and customer oriented. Every employee treats our customer like family and friends and are a dedicated and loyal part of their management team.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                   
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="hm-feature-block-1">
+                        <div class="theme-img theme-img-scalerotate">
+                        </div>
+                        <span>Excellence in Service</span>
+                        <p class="paragraph-small paragraph-black">We understand the need for service does not always happen during normal business, scienoveda guides clients through every step of excellence and providing clients a complete service package.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div><!-- End Feature Section -->
+
+
+
+<!-- Start Team Section -->
+<div class="colored-background">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl">
+                <h3>Our Team</h3>
+            </div>
+            <div class="layer-container">
+                <div id="hm-doctor-slider" class="owl-carousel owl-theme theme-owl-dot">
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="~/images/preeti.jpg" alt="">
+                        <h6>Preeti Chaudhary</h6>
+                        <p>Director/ Productivity Incharge</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="~/images/anuradha.jpg" alt="">
+                        <h6>Anuradha</h6>
+                        <p>Dietitian Expert</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="~/images/pretima.jpg" alt="">
+                        <h6>Pretima</h6>
+                        <p>Marketing Executive</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="~/images/vikash.jpg" alt="">
+                        <h6>Vikash Thakur</h6>
+                        <p>Delivery Incharge</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="~/images/deep.jpg" alt="">
+                        <h6>Gagandeep Singh</h6>
+                        <p>Company Adviser</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="" alt="">
+                        <h6>Ankit Aggarwal</h6>
+                        <p>Medicine Dealer Incharge</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="" alt="">
+                        <h6>Bhanu Partap</h6>
+                        <p>Packing Incharge</p>
+                    </div>
+                    <div class="hm-doctor">
+                        <img class="img-responsive" src="" alt="">
+                        <h6>Manjot Singh</h6>
+                        <p>Label and Packing Incharge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Team Section -->
+
+
+
+<!-- Start Testimonial Section -->
+<div id="testimonial" class="">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl">
+                <h3>What People Say</h3>
+            </div>
+            <div class="layer-container">
+                <div id="testimonial-slider" class="owl-carousel owl-theme theme-owl-dot">
+                    <div class="testimonial-block">
+                        <img class="img-responsive" src="~/images/jaskaran.jpg" alt=""  style="width: 200px; height:200px">
+                        <div class="paragraph-medium">
+                            <i class="fa fa-quote-left"></i>
+                            Thanks to Himway Garcinia Cambogia, I lost 2 kg in a week with regular exercise and healthy diet suggested by Dietitian Anuradha.
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <a>Jaskaran Singh, CEO of Sarovar Group</a>
+                    </div>
+                    <div class="testimonial-block">
+                        <img class="img-responsive" src="~/images/balkar.jpg" alt="">
+                        <div class="paragraph-medium">
+                            <i class="fa fa-quote-left"></i>
+                            I have been using it for 3 months and have lost 12 kg. I would like to suggest this product to everyone who would like to reduce weight.<i class="fa fa-quote-right"></i>
+                        </div>
+                        <a>Balkar</a>
+                    </div>
+                    <div class="testimonial-block">
+                        <img class="img-responsive" src="~/images/puneet.jpg" alt="">
+                        <div class="paragraph-medium">
+                            <i class="fa fa-quote-left"></i>
+                            AM, Puneet due to fast food mera weight kafi increase hogaya tha or mere performance pe kafi asar pd rha tha because I am athlete player. But thanks to Himway Slimfast. jiske wjhse m apne goal pe dubara poch paiya.<i class="fa fa-quote-right"></i>
+                        </div>
+                        <a>Puneet Gujjar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Testimonial Section -->
+
+<!-- Contact us-->
+<div class="colored-background">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="layer-container">
+                <div class="paragraph-medium paragraph-black">
+                    <form id="contactUs">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-input-icon">
+                                    <i class="fa fa-user-o"></i>
+                                    <input id="txtName" class="mdl-textfield__input white" type="text" >
+                                    <label class="mdl-textfield__label" for="txtName">Name</label>
+                                    <span class="mdl-textfield__error">Please Enter Valid Name!</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-input-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <input class="mdl-textfield__input white" type="email" id="txtEmail">
+                                    <label class="mdl-textfield__label" for="txtEmail">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-input-icon">
+                                    <i class="fa fa-phone"></i>
+                                    <input class="mdl-textfield__input white" type="text" pattern="[0-9]*" id="txtMobile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-input-icon">
+                                    <i class="fa fa-pencil"></i>
+                                    <textarea id="txtContent" class="mdl-textfield__input white" style="max-width:none !important"></textarea>
+                                    <label class="mdl-textfield__label" for="txtContent">Content</label>
+                                    <span class="mdl-textfield__error">Please Enter at least 100 words</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-2"> </div>
+                        <div class="col-md-3"><div class="col-md-1"></div><input id="btnSubmit" type="button" value=" Submit" class="btn btn-info" /></div>
+                        <div class="col-md-3"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Contact Us-->
+<!-- Start Emergency Section -->
+<div class="">
+<div id="">
+    <div class="layer-stretch">
+        <div class="layer-wrapper">
+            <div class="layer-ttl">
+                <h3>On Emergency</h3>
+            </div>
+            <div class="layer-container">
+                <div class="paragraph-medium">
+                    You can also give us a 
+                </div>
+                <div class="emergency-number">Call : +91 959 295 8082</div>
+            </div>
+        </div>
+    </div>
+</div></div><!-- End Emergency Section -->
+
+
